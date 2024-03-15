@@ -6,7 +6,13 @@ export default function AuthStaffPage() {
     <div className="min-h-screen flex flex-col items-center justify-center">
       <div className="flex flex-col bg-white shadow-lg px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-md w-full max-w-md">
         <div className="items-center justify-between flex flex-col pr-4">
-          <Image src="/UTCC.png" width={350} height={75} alt="test" />
+          <Image
+            src="/UTCC.png"
+            width={350}
+            height={75}
+            alt="test"
+            loading="lazy"
+          />
         </div>
 
         <div className="relative mt-6 h-px bg-gray-300">
