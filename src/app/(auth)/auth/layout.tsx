@@ -11,5 +11,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <div className="container mx-auto">{children}</div>;
+  return <div className="-mt-24 -mb-28 h-screen">{children}</div>;
 }
