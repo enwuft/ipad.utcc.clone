@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -12,32 +13,23 @@ const Footer = () => {
           </p>
 
           <div className="flex mt-3 -mx-2 sm:mt-0">
-            <a
-              href="#"
+            <Link
+              href="/teams"
               className="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300"
-              aria-label="Reddit"
+              aria-label="teams"
             >
               {" "}
               Teams{" "}
-            </a>
+            </Link>
 
-            <a
-              href="#"
+            <Link
+              href="/privacy"
               className="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300"
-              aria-label="Reddit"
+              aria-label="Privacy"
             >
               {" "}
               Privacy{" "}
-            </a>
-
-            <a
-              href="#"
-              className="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300"
-              aria-label="Reddit"
-            >
-              {" "}
-              Cookies{" "}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
