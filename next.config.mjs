@@ -1,4 +1,6 @@
-const withPWA = require("@ducanh2912/next-pwa").default({
+import withPWAInit from "@ducanh2912/next-pwa";
+
+const withPWA = withPWAInit({
   dest: "public",
   cacheOnFrontEndNav: true,
   aggressiveFrontEndNavCaching: true,
@@ -37,10 +39,14 @@ const nextConfig = {
             key: "X-Frame-Options",
             value: "DENY",
           },
+          {
+            key: "Access-Control-Allow-Origin",
+            value: "*",
+          },
         ],
       },
     ];
   },
 };
 
-export default nextConfig;
+export default withPWA(nextConfig);

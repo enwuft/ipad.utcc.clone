@@ -1,3 +1,4 @@
+import Navbar from "@/components/navbar";
 import type { Metadata } from "next";
 import React from "react";
 
@@ -11,5 +12,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <div className="-mt-24 -mb-28 h-screen">{children}</div>;
+  return (
+    <div>
+      <div className="max-h-full">{children}</div>
+    </div>
+  );
 }
