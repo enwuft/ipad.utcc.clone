@@ -15,11 +15,11 @@ export default async function RootLayout({
 }>) {
   const session = await getServerSession();
   if (!session || !session.user) {
-    redirect("/api/auth/signin");
+    redirect("/auth/student");
   }
 
   return (
-    <>
+    <div>
       <div className="md:hidden">
         <Image
           src="/examples/dashboard-light.png"
@@ -37,6 +37,6 @@ export default async function RootLayout({
         />
       </div>
       <div className="container mx-auto">{children}</div>
-    </>
+    </div>
   );
 }

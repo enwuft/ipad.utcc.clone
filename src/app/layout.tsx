@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import Script from "next/script";
+import { Toaster } from "react-hot-toast";
+
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { NextLoaderComponent } from "@/components/core/next-loader";
-import Script from "next/script";
-import { Toaster } from "react-hot-toast";
 
-import { SessionProvider } from "next-auth/react";
+// import { SessionProvider } from "next-auth/react";
 import { getServerSession } from "next-auth";
 
 export const metadata: Metadata = {
@@ -32,16 +33,16 @@ export default async function RootLayout({
           />
         )}
       </head>
-      <body className="">
-        <SessionProvider session={session}>
-          <Toaster />
-          <NextLoaderComponent />
-          <Navbar />
+      <body className="container mx-auto pt-2">
+        {/* <SessionProvider session={session}> */}
+        <Toaster />
+        <NextLoaderComponent />
+        <Navbar />
 
-          {children}
+        {children}
 
-          <Footer />
-        </SessionProvider>
+        <Footer />
+        {/* </SessionProvider> */}
       </body>
     </html>
   );
