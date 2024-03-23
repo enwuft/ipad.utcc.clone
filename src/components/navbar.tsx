@@ -56,7 +56,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 const Navbar = () => {
   return (
-    <div className="z-10 lg:w-full items-center justify-between text-sm lg:flex hidden">
+    <div className="z-10 lg:w-full items-center justify-between text-sm lg:flex">
       <div className="fixed flex p-30 w-full items-end justify-center  dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
         <Link href="/">
           <Image

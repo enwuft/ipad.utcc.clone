@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { NextLoaderComponent } from "@/components/core/next-loader";
 import Script from "next/script";
 import { Toaster } from "react-hot-toast";
+import Navbar from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: "IPad, Laptop | UTCC",
@@ -31,8 +30,6 @@ export default function RootLayout({
       <body className="">
         <Toaster />
         <NextLoaderComponent />
-        <Navbar />
-
         {children}
 
         <Footer />
