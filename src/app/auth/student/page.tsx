@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,7 +26,7 @@ export default function AuthStudentPage() {
           </div>
         </div>
         <div className="mt-10">
-          <form action="#">
+          <form>
             <div className="flex flex-col mb-6">
               <label
                 htmlFor="email"
@@ -91,7 +93,10 @@ export default function AuthStudentPage() {
             </div>
 
             <div className="flex w-full">
-              <Button className="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-blue-800 hover:bg-blue-700 rounded py-2 w-full transition duration-150 ease-in">
+              <Button
+                type="submit"
+                className="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-blue-800 hover:bg-blue-700 rounded py-2 w-full transition duration-150 ease-in"
+              >
                 <span className="mr-2 uppercase">Login</span>
                 <span>
                   <svg
